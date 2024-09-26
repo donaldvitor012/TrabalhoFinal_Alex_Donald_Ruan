@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Estoque</title>
+    <link rel="stylesheet" href="css/syles.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Estoque</h1>
+        <nav>
+            <button id="viewProductsBtn">Visualizar Produtos</button>
+            <button id="addProductBtn">Cadastrar Produto</button>
+            <button id="viewSuppliersBtn">Visualizar Fornecedores</button>
+            <button id="addSupplierBtn">Cadastrar Fornecedor</button>
+            <button id="viewRequestsBtn">Visualizar Solicitações</button> <!-- Novo botão -->
+
+
+        </nav>
+    </header>
+
+    <!-- Formulário de cadastro de produto -->
+    <section id="productFormSection" class="form-section">
+        <h2>Cadastrar Produto</h2>
+        <form id="productForm">
+            <input type="text" id="productCode" placeholder="Código do Produto" required>
+            <input type="text" id="productDescription" placeholder="Descrição do Produto" required>
+            <input type="text" id="productCategory" placeholder="Categoria" required>
+            <input type="number" id="productQuantity" placeholder="Quantidade em Estoque" required>
+            <input type="text" id="unitOfMeasure" placeholder="Unidade de Medida" required>
+            <input type="number" id="purchasePrice" placeholder="Preço de Compra" required>
+            <input type="text" id="productSupplier" placeholder="Fornecedor" required>
+            <input type="date" id="entryDate" placeholder="Data de Entrada no Estoque" required>
+            <input type="date" id="expiryDate" placeholder="Data de Validade" required>
+            <input type="text" id="warehouseLocation" placeholder="Localização no Armazém" required>
+            <button type="submit">Cadastrar Produto</button>
+        </form>
+    </section>
+
+    <!-- Formulário de cadastro de fornecedor -->
+    <section id="supplierFormSection" class="form-section">
+        <h2>Cadastrar Fornecedor</h2>
+        <form id="supplierForm">
+            <input type="text" id="supplierName" placeholder="Nome do Fornecedor" required>
+            <input type="text" id="supplierCNPJCPF" placeholder="CNPJ/CPF" required>
+            <input type="text" id="supplierPhone" placeholder="Telefone" required>
+            <input type="email" id="supplierEmail" placeholder="E-mail" required>
+            <input type="url" id="supplierSite" placeholder="Site">
+            <input type="number" id="supplierRating" placeholder="Avaliação" min="1" max="5" required>
+            <input type="text" id="supplierDiscounts" placeholder="Descontos Oferecidos">
+            <button type="submit">Cadastrar Fornecedor</button>
+        </form>
+    </section>
+
+    <!-- Seções para visualização de produtos e fornecedores -->
+    <section id="viewProductsSection" class="view-section">
+        <h2>Produtos Cadastrados</h2>
+        <table id="productsTable">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descrição</th>
+                    <th>Categoria</th>
+                    <th>Quantidade</th>
+                    <th>Unidade</th>
+                    <th>Preço</th>
+                    <th>Fornecedor</th>
+                    <th>Data Entrada</th>
+                    <th>Validade</th>
+                    <th>Localização</th>
+                    <th>Ações</th> <!-- Nova coluna para o botão de exclusão -->
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <section id="viewSuppliersSection" class="view-section">
+        <h2>Fornecedores Cadastrados</h2>
+        <table id="suppliersTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CNPJ/CPF</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Site</th>
+                    <th>Avaliação</th>
+                    <th>Descontos</th>
+                    <th>Ações</th> <!-- Nova coluna para o botão de exclusão -->
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+        <!-- Nova seção para visualizar as solicitações -->
+    <section id="viewRequestsSection" class="view-section">
+        <h2>Solicitações de Produtos</h2>
+        <ul id="requestsList"></ul>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

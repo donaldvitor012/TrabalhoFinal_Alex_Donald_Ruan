@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Padronizado com o CSS original */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px; /* Padronizado com o CSS original */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Padronizado com o CSS original */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007BFF; /* Padronizado com o CSS original */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Padronizado com o CSS original */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Padronizado com o CSS original */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #e9ecef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
